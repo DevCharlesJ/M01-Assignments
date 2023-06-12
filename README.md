@@ -1,2 +1,1 @@
-# M01-Assignments
-Assignments in Module 1
+# PyClass_Assignment
