@@ -13,9 +13,9 @@ while (lname := input("Enter student's last name, or 'ZZZ' to quit: ")) != 'ZZZ'
     gpa = float(input("Enter student's gpa (Ex: 3.5): "))
     award = ""
 
-    if gpa > 3.5:
+    if gpa >= 3.5:
         award = "Dean's List"
-    elif gpa > 3.25:
+    elif gpa >= 3.25:
         award = "Honor Roll"
 
     if award:
