@@ -1,9 +1,9 @@
-""" Vehicle Info
-
-    Author: Charles Jones
-    Description: Recieves vehicle info provided by the user and outputs this info, formatted nicely :)
 """
+Vehicle Info
 
+Author: Charles Jones
+Description: Receives vehicle info provided by the user and outputs this info, formatted nicely :)
+"""
 
 class Vehicle:
     def __init__(self, vehicle_type):
@@ -21,8 +21,7 @@ class Automobile(Vehicle):
         self.roof = roof
 
     def __str__(self):
-        # Triple quotes looked wierd
-        # Used statement continuation ('\') instead
+        # Used statement continuation ('\') instead of triple quotes
         return f"Vehicle type: {self.vehicle_type}\n" \
                f"Year: {self.year}\n" \
                f"Make: {self.make}\n" \
@@ -42,8 +41,8 @@ def main():
     while (doors := int(input("Enter the number of doors (options: 2, 4): "))) not in (2,4):
         print("\tNumber of doors must be 2 or 4!")
 
-    while (roof := input("Enter the type of roof (options: solid, sun roof): ")) not in ("solid", "sun roof"):
-        print("\tRoof must be a solid or sun roor!")
+    while (roof := input("Enter the type of roof (options: solid, sunroof): ")) not in ("solid", "sunroof"):
+        print("\tRoof must be solid or sunroof!")
 
     automobile = Automobile(vehicle_type, year, make, model, doors, roof)
     print(automobile)
