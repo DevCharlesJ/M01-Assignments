@@ -38,8 +38,17 @@ def main():
     make = input("Enter the make: ")
     model = input("Enter the model: ")
 
-    while (doors := int(input("Enter the number of doors (options: 2, 4): "))) not in (2,4):
-        print("\tNumber of doors must be 2 or 4!")
+    doors = ""
+    while True:
+        try:
+            doors = int(input("Enter the number of doors (options: 2, 4): "))
+            # Input was a valid integer
+            if doors in (2,4):
+                break
+            else:
+                raise(ValueError)
+        except ValueError:
+            print("\tNumber of doors must be 2 or 4!")
 
     while (roof := input("Enter the type of roof (options: solid, sunroof): ")) not in ("solid", "sunroof"):
         print("\tRoof must be solid or sunroof!")
